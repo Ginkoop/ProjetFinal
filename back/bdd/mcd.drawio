@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram id="mcd-cinnk" name="MCD Cinnk">
+    <mxGraphModel dx="856" dy="412" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="utilisateur" value="USERS&lt;br&gt;&lt;div&gt;&lt;br&gt;id&lt;br&gt;nom&lt;br&gt;prenom&lt;br&gt;email&lt;br&gt;password&lt;br&gt;role&lt;/div&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="80" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="otG_deSpXk0qeHGfleBv-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="commande" target="utilisateur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="commande" value="ORDERS&lt;br&gt;&lt;br&gt;&lt;div&gt;id&lt;br&gt;date&lt;br&gt;total&lt;br&gt;statut&lt;/div&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="340" y="90" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="produit" value="PRODUCTS&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;id&lt;br&gt;nom&lt;br&gt;description&lt;br&gt;prix&lt;br&gt;stock&lt;br&gt;image&lt;/div&gt;&lt;/div&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="320" y="260" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="categorie" value="CATEGORIES&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;id&lt;br&gt;nom&lt;/div&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="285" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="order_items" value="ORDER_ITEMS&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;quantite&lt;br&gt;prix_achat&lt;/div&gt;" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="170" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_passer" value="PASSER" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fontSize=11;" parent="1" source="utilisateur" target="commande" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_u_cmd" value="1,1" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_passer" vertex="1">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="-5" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_cmd_u" value="0,n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_passer" vertex="1">
+          <mxGeometry x="0.9" y="-1" relative="1" as="geometry">
+            <mxPoint x="-5" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_appartenir" value="APPARTENIR" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fontSize=11;" parent="1" source="categorie" target="produit" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cat_p" value="0,n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_appartenir" vertex="1">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="-6" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_p_cat" value="1,1" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_appartenir" vertex="1">
+          <mxGeometry x="0.9" y="-1" relative="1" as="geometry">
+            <mxPoint x="-4" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_composer_cmd" value="COMPOSER" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fontSize=11;" parent="1" source="commande" target="order_items" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cmd_oi" value="1,n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_composer_cmd" vertex="1">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_composer_prod" value="COMPOSER" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fontSize=11;" parent="1" source="produit" target="order_items" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_p_oi" value="0,n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_composer_prod" vertex="1">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="9" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31hTUweyKPsGW6JQL07c-3" value="1,1" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="31hTUweyKPsGW6JQL07c-5" value="1,1" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

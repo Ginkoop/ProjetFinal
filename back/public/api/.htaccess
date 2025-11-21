@@ -1,0 +1,19 @@
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "https://ecom.awesome-ride.62-210-99-155.plesk.page"
+    Header always set Access-Control-Allow-Origin "https://awesome-ride.62-210-99-155.plesk.page"
+
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Accept"
+</IfModule>

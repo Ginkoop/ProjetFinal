@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram id="mpd-cinnk" name="MPD Cinnk">
+    <mxGraphModel dx="1426" dy="872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="users" value="users" style="shape=swimlane;rounded=0;html=1;childLayout=stackLayout;horizontal=1;startSize=26;swimlaneFillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="80" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oK2rjrlwco22g6RCCSTs-3" value="&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id (PK)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nom&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;prenom&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;email&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;password&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;role&lt;/span&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="users">
+          <mxGeometry y="26" width="180" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="orders" value="orders" style="shape=swimlane;rounded=0;html=1;childLayout=stackLayout;horizontal=1;startSize=26;swimlaneFillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="320" y="80" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="order_items" value="order_items" style="shape=swimlane;rounded=0;html=1;childLayout=stackLayout;horizontal=1;startSize=26;swimlaneFillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="680" y="120" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="oK2rjrlwco22g6RCCSTs-5" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id (PK)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;order_id (FK → orders.id)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;product_id (FK → products.id)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;quantite&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;prix_achat&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="order_items">
+          <mxGeometry y="26" width="260" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="products" value="products" style="shape=swimlane;rounded=0;html=1;childLayout=stackLayout;horizontal=1;startSize=26;swimlaneFillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="320" y="340" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="oK2rjrlwco22g6RCCSTs-6" value="&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nom&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;description&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;prix&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;stock&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;image&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;category_id (FK → categories.id)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="products">
+          <mxGeometry y="26" width="260" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="categories" value="&lt;div&gt;categories&lt;/div&gt;" style="shape=swimlane;rounded=0;html=1;childLayout=stackLayout;horizontal=1;startSize=26;swimlaneFillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="340" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="oK2rjrlwco22g6RCCSTs-7" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id (PK)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;nom&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="categories">
+          <mxGeometry y="26" width="180" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_users_orders" value="" style="edgeStyle=elbowEdgeStyle;endArrow=block;startArrow=oval;html=1;fontSize=11;" parent="1" source="users" target="orders" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_users_orders" value="1 ── n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;rotation=90;" parent="rel_users_orders" vertex="1">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_orders_items" value="" style="edgeStyle=elbowEdgeStyle;endArrow=block;startArrow=oval;html=1;fontSize=11;" parent="1" source="orders" target="order_items" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_orders_items" value="1 ── n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;rotation=90;" parent="rel_orders_items" vertex="1">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="22" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_products_items" value="" style="edgeStyle=elbowEdgeStyle;endArrow=block;startArrow=oval;html=1;fontSize=11;" parent="1" source="products" target="order_items" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_products_items" value="1 ── n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;" parent="rel_products_items" vertex="1">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_categories_products" value="" style="edgeStyle=elbowEdgeStyle;endArrow=block;startArrow=oval;html=1;fontSize=11;" parent="1" source="categories" target="products" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="card_categories_products" value="1 ── n" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;rotation=90;" parent="rel_categories_products" vertex="1">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint x="5" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oK2rjrlwco22g6RCCSTs-2" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;id (PK)&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;date&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;total&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;statut&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;user_id (FK → users.id)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="110" width="220" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
